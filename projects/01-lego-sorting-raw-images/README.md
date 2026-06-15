@@ -1,10 +1,33 @@
-# Applied Machine Learning 
-## Project – Stage 1 (Sorting Legos Using Raw Images)
+# Lego sorting — stage 1: raw image classifier
 
-You have been hired by a company to develop machine learning algorithms for a sorting facility. The requirement is that the sorting device takes images of items on a conveyor belt, and then uses and machine learning algorithm to classify the items into classes. Then, the items get routed through different routes on the conveyor belt depending on their class.
+Three-class image classification of Lego pieces using a single-neuron classifier trained directly on raw pixel values.
 
-For the sake of this project, you are given RGB images, and your focus will be on developing the classification algorithms. Also, for simplicity, it is assumed that items are Lego pieces of three different types with the following shapes (top view): Rectangles (2x4), squares (2x2), and circles (2x2). Examples are shown below:
+## Problem
 
-<img align="center" src="Lego.JPG">
+A sorting facility uses a camera on a conveyor belt to classify Lego pieces by shape and route them accordingly. The classifier must distinguish three piece types from their top-view images:
 
-Your algorithm should be able to classify these three classes with an acceptable level of accuracy. It must use the raw image (grayscale conversion and scaling/cropping are acceptable) as an input to a single neuron classifier with < 𝟒𝟎𝟗𝟕 weights (trainable parameters). You are given two datasets to achieve this goal, each containing multiple images of each class. Use the dataset in the folder ‘training’ for training, and the one in the folder ‘testing’ for testing. Do not change the names of the folders or files.
+| Class | Shape | Size |
+|-------|-------|------|
+| Rectangle | Brick | 2×4 studs |
+| Square | Brick | 2×2 studs |
+| Circle | Plate | 2×2 round |
+
+![Lego piece examples](Lego.JPG)
+
+## Constraints
+
+- **Input:** Raw RGB images (grayscale conversion and uniform scaling/cropping are permitted)
+- **Model:** Single-neuron classifier (one set of weights applied to all pixels)
+- **Parameter budget:** Fewer than 4 097 trainable weights
+- **Data:** Pre-split into `training/` and `testing/` folders; folder and file names must not be changed
+
+## Approach
+
+Images are converted to grayscale and scaled to fit within the parameter budget. The flattened pixel vector is fed directly into a single-neuron (linear) model trained with logistic regression or a single-layer perceptron.
+
+## Files
+
+| File | Description |
+|------|-------------|
+| `lego-sorting-raw-images.ipynb` | Full solution notebook |
+| `Lego.JPG` | Example images of the three Lego classes (centred, fixed orientation) |
