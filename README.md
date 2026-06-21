@@ -2,7 +2,7 @@
 
 **Course notebooks and projects from Applied Machine Learning — University of British Columbia**
 
-*Python · Jupyter · University of British Columbia*
+*Applied Machine Learning — University of British Columbia*
 
 Arash J. Khabbazi
 
@@ -18,7 +18,7 @@ Arash J. Khabbazi
 
 ## Overview
 
-This repository contains practice notebooks and course projects completed as part of the Applied Machine Learning course at the University of British Columbia. The course covers the mathematical foundations and practical implementation of classical machine learning methods using Python and scikit-learn, progressing from linear models through neural networks and unsupervised learning.
+Practice notebooks and course projects from the Applied Machine Learning course at the University of British Columbia. The course covers the mathematical foundations and practical implementation of classical machine learning methods using Python and scikit-learn, progressing from linear models through neural networks and unsupervised learning.
 
 Each notebook in `notebooks/` corresponds to a lecture module and includes worked examples, visualizations, and exercises on real datasets. The `projects/` directory contains two-stage image classification projects.
 
@@ -48,7 +48,7 @@ Each notebook in `notebooks/` corresponds to a lecture module and includes worke
 
 ---
 
-## How to run
+## How to use
 
 **Requirements:** Python 3.x, Jupyter, NumPy, Pandas, scikit-learn, Matplotlib.
 
